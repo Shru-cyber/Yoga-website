@@ -1,0 +1,348 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #815c9e;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 1.5rem;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #815c9e;
+}
+
+/* Hero Section (Enhanced with background image + overlay) */
+.hero {
+  background:
+
+    url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1920&q=80")
+    center/cover no-repeat;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #815c9e;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.btn {
+  background-color: #815c9e;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #6a4d82;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Light yoga texture background (Classes & About) */
+#classes{
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    url("https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg")
+    center/cover no-repeat;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #815c9e;
+}
+
+/* About Section Text */
+/* About Section Text */
+.about-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* matches site font */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Highlight trainer name */
+.trainer-name {
+  color: #815c9e;
+  font-weight: 600; /* matches other headings in site */
+}
+
+/* Trainer info styling */
+.trainer-info {
+  font-style: italic;
+  color: #6a4d82;
+  font-weight: 400; /* normal weight for contrast */
+}
+
+/* Contact details */
+.contact-link,
+.contact-phone {
+  color: #815c9e;
+  font-weight: 500; /* matches other emphasized text in site */
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.contact-link:hover,
+.contact-phone:hover {
+  color: #6a4d82;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Class Cards (Glassmorphism style) */
+.class-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: #815c9e;
+}
+
+/* Pricing List */
+/* Pricing Dropdown */
+.pricing-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+/* Individual pricing card - same size as class cards */
+.pricing-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85); /* glassmorphism */
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  width: 300px;    /* same width as class cards */
+  height: 300px;   /* same height as class cards */
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hover effect */
+.pricing-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(129, 92, 158, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Selected card highlight */
+.pricing-card.active {
+  border: 2px solid #815c9e;
+  box-shadow: 0 15px 35px rgba(129, 92, 158, 0.4);
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Card Title */
+.pricing-card h3 {
+  font-size: 1.5rem;
+  color: #815c9e;
+  margin-bottom: 1rem;
+}
+
+/* Card Price */
+.pricing-card p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Optional "Enroll Now" button inside card */
+.pricing-card button {
+  background-color: #815c9e;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.pricing-card button:hover {
+  background-color: #6a4d82;
+  transform: scale(1.05);
+}
+
+/* Dropdown styling */
+#pricing-select {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+/* Contact Form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contact-form button {
+  background-color: #815c9e;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+  background-color: #6a4d82;
+}
+
+/* Footer with calm yoga background */
+.footer {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url('images/yoga-footer.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* ================================
+   CLASS-SPECIFIC YOGA IMAGES
+   (Clear images – no gradient overlay)
+   ================================ */
+
+.class-cards .card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: #333;
+}
+
+/* Remove gradient overlay completely */
+.class-cards .card::before {
+  display: none;
+}
+
+/* Improve text readability without hiding image */
+.class-cards .card h3,
+.class-cards .card p {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divine Yoga</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Divine Yoga</div>
+      <ul class="nav-links">
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Welcome to Divine Yoga</h1>
+      <p>Find your inner peace and strength</p>
+      <a href="#classes" class="btn">Join a Class</a>
+    </div>
+  </header>
+
+<!-- Class Card -->
+  <section id="classes" class="section">
+    <h2>Our Classes</h2>
+    <div class="class-cards">
+      <div class="card">
+        <h3>Hatha Yoga</h3>
+        <p>Balance and flexibility for all levels.</p>
+      </div>
+      <div class="card">
+        <h3>Vinyasa Flow</h3>
+        <p>Dynamic sequences to energize your body.</p>
+      </div>
+      <div class="card">
+        <h3>Yin Yoga</h3>
+        <p>Deep stretches for relaxation and recovery.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p class="about-text">
+    <strong>Divine Yoga</strong> is a serene space dedicated to holistic wellness. 
+    Our experienced trainer, <span class="trainer-name">Priya Sharma</span> 
+    (<span class="trainer-info">B.Sc in Yoga Therapy, Certified Hatha & Vinyasa Instructor</span>), guides you through 
+    Hatha, Vinyasa Flow, and Yin Yoga practices for all levels. With over 8 years of teaching experience and workshops across India, 
+    we help you achieve physical balance, mental clarity, and inner peace. 
+    Contact us at <a href="mailto:contact@divineyoga.com" class="contact-link">contact@divineyoga.com</a> or 
+    <a href="tel:+919876543210" class="contact-phone">+91 98765 43210</a> to begin your journey.
+  </p>
+</section>
+
+  <section id="pricing" class="section">
+  <h2>Pricing</h2>
+
+  <!-- Dropdown -->
+  <select id="pricing-select">
+    <option value="">Show All Plans</option>
+    <option value="dropin">Drop-In</option>
+    <option value="monthly">Monthly Unlimited</option>
+    <option value="annual">Annual Membership</option>
+  </select>
+
+  <!-- Pricing Cards -->
+  <ul class="pricing-list">
+    <li class="pricing-card" data-plan="dropin">
+      <h3>Drop-In</h3>
+      <p>₹500 per class</p>
+      <button onclick="enroll('Drop-In')">Enroll Now</button>
+    </li>
+
+    <li class="pricing-card" data-plan="monthly">
+      <h3>Monthly Unlimited</h3>
+      <p>₹4,000 per month</p>
+      <button onclick="enroll('Monthly Unlimited')">Enroll Now</button>
+    </li>
+
+    <li class="pricing-card" data-plan="annual">
+      <h3>Annual Membership</h3>
+      <p>₹40,000 per year</p>
+      <button onclick="enroll('Annual Membership')">Enroll Now</button>
+    </li>
+  </ul>
+</section>
+
+ <!-- Contact form -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Divine Yoga. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
