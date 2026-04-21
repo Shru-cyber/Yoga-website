@@ -31,20 +31,29 @@ A simple and responsive Yoga Website built using **HTML, CSS, and JavaScript** f
 ## 📁 Project Structure
 yoga-website/
 │
-├── static/
-│ ├── css/
-│ │ └── style.css
-│ ├── js/
-│ │ └── script.js
-│ └── images/
+├── app/                        # Main application package
+│   ├── __init__.py             # App initialization
+│   ├── routes.py               # All Flask routes
+│   └── forms.py (optional)     # Form handling logic
 │
-├── templates/
-│ ├── index.html
-│ ├── poses.html
-│ └── contact.html
+├── static/                     # Static assets
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│       └── (yoga images)
 │
-├── app.py
-├── requirements.txt
+├── templates/                  # HTML templates (Jinja2)
+│   ├── base.html               # Common layout (navbar/footer)
+│   ├── index.html              # Home page
+│   ├── poses.html              # Yoga poses page
+│   └── contact.html            # Contact form page
+│
+├── config.py                   # App configuration (optional)
+├── run.py                      # Entry point to run the app
+├── requirements.txt            # Dependencies
+├── .gitignore
 └── README.md
 
 
